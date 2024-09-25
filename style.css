@@ -1,0 +1,259 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 1220px;
+    margin: 0 auto;
+}
+/* navbar part start */
+nav {
+    background-color: #FFF;
+    padding: 20px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    font-size: 16px;
+}
+
+.nav_menu {
+    display: flex;
+    gap: 40px;
+}
+
+.nav_menu a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 400;
+}
+.nav_menu a:hover{
+    color: #00b795;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+.nav_right{
+    padding-left: 60px;
+    display: flex;
+    gap: 45px;
+    align-items: center;
+}
+
+.nr_1 {
+    color: #00b795;
+}
+
+.nr_3 a {
+    color: #fff;
+    padding: 15px 30px;
+    background-color: #00b795;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.nr_3 a:hover{
+    color: #333;
+}
+.menu_bar {
+    display: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+/* navbar part end */
+
+
+/* hero section start */
+#hero {
+    padding: 150px 150px;
+    background: url("/images/hero.png") no-repeat center / cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+    z-index: -1;
+}
+
+#hero::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: #494747;
+    opacity: 0.6;
+    z-index: -2;
+}
+
+.hero_text {
+    padding: 70px;
+}
+
+.hero_text h2{
+    font-size: 40px;
+    font-weight: 600;
+    animation: text 4s ease-out ;
+    -webkit-animation: text 4s ease-out ;
+}
+.hero_text p{
+    padding: 10px 90px 0 90px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    animation: text 4s ease-out;
+    -webkit-animation: text 4s ease-out;
+}
+@keyframes text {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+/* hero section end */
+
+
+/* cardd part start */
+.card {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.card-1{
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    width: 350px;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card h3 {
+    margin: 10px 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.card p {
+    padding: 0 10px 10px;
+    font-size: 14px;
+}
+/* card part end */
+
+/* responsive */
+@media (max-width: 768px) {
+
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+    
+    nav {
+        padding: 5px 0;
+        z-index: 1000;
+    }
+
+    .navbar {
+        z-index: 999;
+    }
+
+    .navbar img {
+        width: 40%;
+    }
+
+    .nav_menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        text-align: center;
+        top: 42px;
+        right: 0;
+        background-color: #333;
+        width: 250px;
+        height: 650px;
+        padding: 20px 0;
+        transform: translateX(100%);
+        transition: transform 5ms ease;
+        -webkit-transition: transform 5ms ease;
+        -moz-transition: transform 5ms ease;
+        -ms-transition: transform 5ms ease;
+        -o-transition: transform 5ms ease;
+    }
+
+    .nav_menu a {
+        color: #FFF;
+    }
+
+    .nav_menu.active {
+        display: flex;
+        transform: translateX(0);
+    }
+
+    .nav_right{
+        margin: 0 auto;
+        flex-direction: column;
+        gap: 20px;
+        align-items: start;
+        padding: 0;
+    }
+
+    .nr_2 {
+        margin: 0 auto 10px auto;
+    }
+
+    .menu_bar {
+        display: block;
+    }
+
+    #hero {
+        padding: 40px 0px;
+    }
+    .hero_text{
+        padding: 50px;
+    }
+    .hero_text h2{
+        font-size: 25px;
+        padding-bottom: 10px;
+    }
+    .hero_text p{
+        font-size: 14px;
+        padding: 0;
+    }
+
+    .card{
+        display: block;
+    }
+    .card-1{
+        margin-bottom: 10px;
+    }
+}
