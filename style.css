@@ -140,6 +140,48 @@ nav {
   }
 /* hero section end */
 
+/* freatured client part start */
+h2 {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.client-list {
+    text-align: center;
+    max-height: 500px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+.client-list::-webkit-scrollbar {
+    display: none;
+}
+
+.client {
+    padding: 15px;
+    opacity: 0.5;
+    color: gray;
+    font-size: 80px;
+    text-transform: uppercase;
+    transition: transform 3s ease-in-out, opacity 0.5s ease-in-out;
+    -webkit-transition: transform 3s ease-in-out, opacity 0.5s ease-in-out;
+    -moz-transition: transform 3s ease-in-out, opacity 0.5s ease-in-out;
+    -ms-transition: transform 3s ease-in-out, opacity 0.5s ease-in-out;
+    -o-transition: transform 3s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .client {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .client {
+        font-size: 30px;
+    }
+}
+/* freatured client part end */
 
 /* cardd part start */
 .card {
